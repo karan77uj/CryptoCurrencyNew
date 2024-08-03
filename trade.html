@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Cryptocurrency</title>
+    <link rel="stylesheet" href="tradestyle.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar fixed-top">
+            <div class="navlogo">
+                <a href="#">
+                    <img src="./img/logo-white.png" alt="">
+                </a>
+            </div>
+            <ul class="nav-links" id="nav">
+                <li class="nav-link"><a href="index.html">Home</a></li>
+                <div class="wallet">
+                    <i class="fa fa-wallet fa-xl" onclick="toggleCart()"></i>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cardcontainer">
+        <header>
+            <h1>Trade Here</h1>
+        </header>
+    </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="./img/bitcoin-btc-logo.png" alt="Image 1">
+            <div class="title">Bitcoin</div>
+            <div class="amount">₹24,00,000</div>
+            <button onclick="addToCart('Bitcoin', 2400000)">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="./img/ethereum-eth-logo.png" alt="Image 2">
+            <div class="title">Ethereum</div>
+            <div class="amount">₹1,50,000</div>
+            <button onclick="addToCart('Ethereum', 150000)">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="./img/tether-usdt-logo.png" alt="Image 3">
+            <div class="title">Tether</div>
+            <div class="amount">₹80</div>
+            <button onclick="addToCart('Tether', 80)">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="./img/tron-trx-logo.png" alt="Image 4">
+            <div class="title">Tron</div>
+            <div class="amount">₹5</div>
+            <button onclick="addToCart('Tron', 5)">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="./img/ethereum-classic-etc-logo.png" alt="Image 5">
+            <div class="title">Ethereum Classic</div>
+            <div class="amount">₹2,000</div>
+            <button onclick="addToCart('Ethereum Classic', 2000)">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="./img/dogecoin-doge-logo.png" alt="Image 6">
+            <div class="title">Dogecoin</div>
+            <div class="amount">₹5</div>
+            <button onclick="addToCart('Dogecoin', 5)">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="./img/near-protocol-near-logo.png" alt="Image 7">
+            <div class="title">NEAR Protocol</div>
+            <div class="amount">₹700</div>
+            <button onclick="addToCart('NEAR Protocol', 700)">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="./img/solana-sol-logo.png" alt="Image 8">
+            <div class="title">Solana</div>
+            <div class="amount">₹3,500</div>
+            <button onclick="addToCart('Solana', 3500)">Buy Now</button>
+        </div>
+    </div>
+
+            <!-- Footer -->
+            <footer>
+
+
+                <div class="footerContainer">
+                    <div class="footerAboutus">
+                        <img src="./img/logo-white.png" alt="">
+                        <p class="darkPara">
+                            With no commissions and a simple user interface,Prouple is the most reliable way to trade for 
+                           Cryptocurrency.
+                        </p>
+        
+                        <div class="footersociallinkContainer">
+                            <img src="./img/fabook-icon-white.svg" class="sociallink" alt="">
+                            <img src="./img/twitter-icon-white.svg" class="sociallink" alt="">
+                            <img src="./img/inkedin-icon-white.svg" class="sociallink" alt="">
+                            <img src="./img/whatsapp-icon-white.svg" class="sociallink" alt="">
+                        </div>
+                    </div>
+        
+                    <div class="footerlink">
+                        <h1 class="linkTitle">Explore</h1>
+                        <a href="#" class="eachLink">About Us</a>
+                        <a href="#" class="eachLink">Blog</a>
+                        <a href="#" class="eachLink">Contact</a>
+                        <a href="#" class="eachLink">FAQ</a>
+                    </div>
+        
+                    <div class="footerlink">
+                        <h1 class="linkTitle">Service</h1>
+                        <a href="#" class="eachLink">Mining</a>
+                        <a href="#" class="eachLink">Control Data</a>
+                        <a href="#" class="eachLink">Design</a>
+                        <a href="#" class="eachLink">Security</a>
+                    </div>
+        
+                    <div class="footerlink">
+                        <h1 class="linkTitle">Resource</h1>
+                        <a href="#" class="eachLink">Style Guide</a>
+                        <a href="#" class="eachLink">Change Log</a>
+                        <a href="#" class="eachLink">License</a>
+                    </div>
+                </div>
+        
+                <div class="footerCopyright">
+                    <p>&copy; 2024 design and developed by <a href="#" class="developedBy">Prouple</a></p>
+                </div>
+            </footer>
+        
+
+    <!-- Cart Div -->
+    <div class="cart" id="cart">
+        <div class="cart-header">
+            <h5>Your Cart</h5>
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+        </div>
+        <div class="cart-body" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="total" id="cartTotal">Total: ₹0</div>
+            <button class="btn btn-danger" onclick="toggleCart()">Close</button>
+        </div>
+    </div>
+
+    <script>
+
+        let cart = [];
+
+        function addToCart(title, amount) {
+            const existingItemIndex = cart.findIndex(item => item.title === title);
+            if (existingItemIndex > -1) {
+                cart[existingItemIndex].quantity += 1;
+            } else {
+                cart.push({ title, amount, quantity: 1 });
+            }
+            alert(title + ' has been added to your cart at the price of ₹' + amount.toLocaleString());
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.amount * item.quantity;
+                cartItems.innerHTML += `
+                    <div class="cart-item">
+                        <span>${item.title} ${item.quantity}</span>
+                        <span>₹${item.amount * item.quantity}</span>
+                        <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Trade</button>
+                    </div>
+                `;
+                
+            });
+            document.getElementById('cartTotal').textContent = `Total:₹${total}`;
+        }
+
+        function removeFromCart(index) {
+            const item = cart[index];
+            alert(`${item.title} has been traded at the price of ₹${(item.amount * item.quantity).toLocaleString()}`);
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function toggleCart() {
+            const cart = document.getElementById('cart');
+            cart.classList.toggle('open');
+        }
+    </script>
+
+</body>
+
+</html>

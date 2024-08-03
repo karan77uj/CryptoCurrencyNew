@@ -1,0 +1,53 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(2, 2, 36);
+    color: white;
+}
+
+section{
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.gridSection{
+    display: grid;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 5em;
+    margin-top: 100px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center; 
+}
+
+#sectionPic{
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+}
+
+.sectionBouncepic img{
+    width: 100%;
+    animation: bounce 15s infinite;
+}
+
+.sectionHeader{
+    font-size: 2rem;
+    margin-bottom: .7em;
+}
+
+.sectionPara{
+    font-size: 1.1rem;
+    margin-bottom: 3em;
+}
+
+@keyframes bounce {
+    0% {transform: translateY(-30px);}
+    50% {transform: translateY(30px);}
+    100% {transform: translateY(-30px);}
+}
+
+.processesContainer{
+    margin-top: 18%;
+}

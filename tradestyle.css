@@ -1,0 +1,110 @@
+body {
+    overflow-x: hidden;
+    background-color: rgb(2, 2, 36);
+}
+
+/* Card */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 80%;
+    gap: 30px;
+    margin:auto;
+    padding: 40px;
+    padding-top: 100px;
+}
+.card {
+    /*background-color: #f0f0f0;*/
+    background-color: transparent;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    border-style: none;
+    padding: 40px;
+    text-align: center;
+    font-size: 1em;
+}
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.card .title {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.card .amount {
+    font-size: 1.1em;
+    /* color: #333; */
+    color: white;
+    margin-bottom: 10px;
+}
+.card button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card button:hover {
+    background-color: #0056b3;
+}
+
+/* Cart Div */
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 30%;
+    height: 100%;
+    background-color: rgb(2, 2, 36);
+    color: white;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+}
+.cart.open {
+    right: 0;
+}
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+.cart-header .close-btn {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.cart-body {
+    padding: 20px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.cart-footer {
+    padding: 20px;
+    background-color: rgb(2, 2, 36);
+    color: white;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    width: 30%;
+}
+.cart-footer .total {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.wallet{
+    padding-top: 10px;
+    color: white;
+    padding-right: 10px;
+}
